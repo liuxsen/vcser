@@ -15,6 +15,7 @@
     "dev": "vite",
     "build": "tsc && vite build && electron-builder --mac",
     "build:win64": "tsc && vite build && electron-builder --win --x64",
+    "dist": "npm run build && npm run build:win64",
     "preview": "vite preview",
     "pree2e": "vite build --mode=test",
     "e2e": "playwright test"
