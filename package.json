@@ -1,5 +1,5 @@
 {
-  "name": "electron-vite-react",
+  "name": "vcser",
   "version": "2.2.0",
   "main": "dist-electron/main/index.js",
   "description": "Electron Vite React boilerplate.",
@@ -13,7 +13,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && electron-builder",
+    "build": "tsc && vite build && electron-builder --mac",
+    "build:win64": "tsc && vite build && electron-builder --win --x64",
     "preview": "vite preview",
     "pree2e": "vite build --mode=test",
     "e2e": "playwright test"
