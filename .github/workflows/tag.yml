@@ -2,6 +2,9 @@
 name: build electron app
 run-name: ${{github.actor}} is build new version app
 
+permissions:
+  contents: write
+
 # on:
 #   push:
 #     branches:
