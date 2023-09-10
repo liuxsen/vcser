@@ -37,6 +37,7 @@ export function update(win: Electron.BrowserWindow) {
     }
   })
 
+
   // Start downloading and feedback on progress
   ipcMain.handle('start-download', (event) => {
     startDownload(
