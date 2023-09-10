@@ -4,7 +4,6 @@ import ffmpeg from 'fluent-ffmpeg'
 import { getWindow } from './window'
 import log from 'electron-log'
 
-const command = ffmpeg()
 ffmpeg.setFfmpegPath(ffmpegPath.path)
 ffmpeg.setFfprobePath(ffprobePath.path)
 // ./ffmpeg -i ~/Downloads/liting/端午节海报.mp4 -c:v libx264 -preset medium -crf 23 -c:a aac -b:a 128k ~/Downloads/liting/端午节海报_compressed.mp4
@@ -37,5 +36,6 @@ export const comporessVideo = (videoPath: string) => {
     .output(outputPath)
     .run()
   } catch (error) {
+    log.error(error)
   }
 }
