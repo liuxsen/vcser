@@ -27,7 +27,8 @@
     "@ffprobe-installer/ffprobe": "2.1.2",
     "@ffmpeg-installer/ffmpeg": "1.1.0",
     "fluent-ffmpeg": "2.1.2",
-    "electron-log": "4.4.8"
+    "electron-log": "4.4.8",
+    "antd": "5.9.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "25.0.4",
@@ -49,6 +50,6 @@
     "vite-plugin-electron-renderer": "^0.14.5"
   },
   "engines": {
-    "node": "^14.18.0 || >=16.0.0"
+    "node": ">=18.0.0"
   }
 }

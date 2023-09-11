@@ -43,7 +43,7 @@ export const createWindow = (windowName: string) => {
   })
 
    // Apply electron-updater
-   update(win)
+  //  update(win)
    videoEvents()
    map.set(windowName, win)
    return win
