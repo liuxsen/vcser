@@ -64,7 +64,6 @@ const compressGif =(videoPath: string, rate: number = 10) => {
       // .outputOptions(`-colors 64`)
       .outputOptions(options)
       // .outputOptions('-coalesce')
-      .save(outputPath)
       .on('progress', function(progress: any) {
         console.log('Processing: ' + progress.percent + '% done');
         if(progress.percent < 100){
@@ -77,7 +76,9 @@ const compressGif =(videoPath: string, rate: number = 10) => {
       })
       .on('error', (err) => {
         log.error('转换出错:', err);
-      });
+      })
+      .output(outputPath)
+      .run()
   });
   
 }
